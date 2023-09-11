@@ -102,6 +102,7 @@ alias gitbranchclean='git remote prune origin && git branch --merged | egrep -v 
 alias gitlogcurrentworkingdirectory='git log --oneline -- **/*'
 alias glcwd=gitlogcurrentworkingdirectory
 alias gprom='git pull --rebase origin master'
+alias hflabels='gh pr edit $(git rev-parse --abbrev-ref HEAD) --add-label "tribe: data-solutions" --add-label "squad: enablement"'
 
 # These came from https://dev.to/joaovitor/exa-instead-of-ls-1onl
 alias l='exa'
