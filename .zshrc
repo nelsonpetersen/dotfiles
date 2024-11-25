@@ -67,7 +67,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions virtualenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,6 +118,4 @@ alias ls='exa --color=auto'
 # https://github.com/ohmyzsh/ohmyzsh/issues/5581#issuecomment-256825141
 prompt_context() {}
 
-plugins=(virtualenv)
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
