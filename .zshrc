@@ -116,3 +116,7 @@ alias ls='exa --color=auto'
 # remove username@hostname in prompt as advised at
 # https://github.com/ohmyzsh/ohmyzsh/issues/5581#issuecomment-256825141
 prompt_context() {}
+
+plugins=(virtualenv)
+
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
