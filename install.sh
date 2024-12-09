@@ -16,6 +16,7 @@ cd .. && rm -rf fonts
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 zsh -c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
 zsh -c 'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting'
+zsh -c 'git clone https://github.com/bhilburn/powerlevel9k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel9k'
 cp ./.zshrc ~
 
 ########################################################################################################################
@@ -32,5 +33,5 @@ rm -f ~/.zshrc
 # restore saved zshrc
 mv ~/.zshrc.bak ~/.zshrc
 # update theme
-sed -i '/^ZSH_THEME/c\ZSH_THEME="agnoster"' ~/.zshrc
+# sed -i '/^ZSH_THEME/c\ZSH_THEME="agnoster"' ~/.zshrc
 ########################################################################################################################
