@@ -1,37 +1,33 @@
 #!/bin/bash
 
-cat bashrc.additions >> ~/.bashrc
+# region System Setup
+
+# Use ANSI color codes
+export TERM=xterm-256color
+
+# Install Oh My Posh
+curl -s https://ohmyposh.dev/install.sh | bash -s
+oh-my-posh font install meslo
+apt install -y git exa
+
+# endregion System Setup
+
+# region Git Setup
 
 cp ./.gitmessage ~
 cp ./.gitconfig ~
 git config --global commit.template ~/.gitmessage
 
-# powerline fonts for zsh agnoster theme
-git clone https://github.com/powerline/fonts.git
-cd fonts
-./install.sh
-cd .. && rm -rf fonts
+# endregion Git Setup
 
-# oh-my-zsh & plugins
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
-zsh -c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
-zsh -c 'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting'
-zsh -c 'git clone https://github.com/bhilburn/powerlevel9k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel9k'
-cp ./.zshrc ~
+#  region Bash Setup
 
-########################################################################################################################
-#### set agnoster as theme, this came from https://gist.github.com/corentinbettiol/21a6d4e942a0ee58d51acb7996697a88
-#### in vscode settings for devcontainer (not for User or Workspace), Search for terminal.integrated.fontFamily value, and set it to "Roboto Mono for Powerline" (or any of those: https://github.com/powerline/fonts#font-families font families).
-# save current zshrc
-mv ~/.zshrc ~/.zshrc.bak
+cat bashrc.additions >> ~/.bashrc
 
-sudo sh -c "$(wget -O- https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh)" -- \
-    -t agnoster
+#  endregion Bash Setup
 
-# remove newly created zshrc
-rm -f ~/.zshrc
-# restore saved zshrc
-mv ~/.zshrc.bak ~/.zshrc
-# update theme
-# sed -i '/^ZSH_THEME/c\ZSH_THEME="agnoster"' ~/.zshrc
-########################################################################################################################
+#  region Zsh Setup
+
+cat zshrc.additions >> ~/.zshrc
+
+#  endregion Zsh Setup
