@@ -8,7 +8,7 @@ export TERM=xterm-256color
 # Install Oh My Posh
 curl -s https://ohmyposh.dev/install.sh | bash -s
 oh-my-posh font install meslo
-apt install -y git exa
+# apt install -y git exa
 
 # endregion System Setup
 
