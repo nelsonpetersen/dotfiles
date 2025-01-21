@@ -17,4 +17,4 @@ alias gitlogonelinepretty='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue
 alias glop=gitlogonelinepretty
 alias gprom='git pull --rebase origin master'
 
-eval "$(oh-my-posh init bash)"
+eval "$(oh-my-posh init bash --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/night-owl.omp.json')"
