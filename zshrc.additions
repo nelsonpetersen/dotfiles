@@ -24,4 +24,4 @@ alias need-dev='gh pr edit $(git rev-parse --abbrev-ref HEAD) --add-label "need-
 # endregion  User configuration
 
 #  Run Oh My Posh
-eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/powerlevel10k_rainbow.omp.json')"
+eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/night-owl.omp.json')"

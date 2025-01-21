@@ -32,3 +32,9 @@ cat bashrc.additions >> ~/.bashrc
 cat zshrc.additions >> ~/.zshrc
 
 #  endregion Zsh Setup
+
+# region Aws Setup
+
+cat aws.additions >> ~/.aws/config
+
+# endregion Aws Setup
