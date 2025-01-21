@@ -4,6 +4,7 @@
 
 # Use ANSI color codes
 export TERM=xterm-256color
+export TZ='Australia/Adelaide'
 
 # Install Oh My Posh
 curl -s https://ohmyposh.dev/install.sh | bash -s
