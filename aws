@@ -6,5 +6,5 @@ region = ap-southeast-1
 format = json
 [sso-session default]
 sso_start_url = https://d-9767663cd2.awsapps.com/start/#
-sso_region = ap-southeast-1
+sso_region = ap-southeast-2
 sso_registration_scopes = sso:account:access
