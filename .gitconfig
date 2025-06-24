@@ -6,6 +6,3 @@
 [user]
 	name = NPetersenBCAE
 	email = nelsonpetersen@bcaengineers.com
-
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
