@@ -4,5 +4,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 [user]
-	name = NPetersenBCAE
+	name = nelsonpetersen
 	email = nelsonpetersen@bcaengineers.com
