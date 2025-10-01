@@ -35,8 +35,8 @@ cat zshrc.additions >> ~/.zshrc
 
 # region Aws Setup
 
-mkdir ~/.aws
-cat aws >> ~/.aws/config
+# mkdir ~/.aws
+# cat aws >> ~/.aws/config
 
 # endregion Aws Setup
 
